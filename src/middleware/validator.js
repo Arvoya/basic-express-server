@@ -1,6 +1,16 @@
 function validator(req, res, next) {
-  if (!req.params.name) {
-    next("No name provided");
+  let names = [
+    "Jacob",
+    "Isai",
+    "Ahmed",
+    "Brock",
+    "John",
+    "Justin",
+    "Mak",
+    "Patrick",
+  ];
+  if (!names.includes(req.params.name)) {
+    next("Try another name in CF");
   } else {
     next();
   }
