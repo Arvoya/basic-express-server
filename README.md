@@ -13,7 +13,7 @@ Editor (not mandatory).
 
 ### Install
 
-    git clone https://github.com/ORG/PROJECT.git
+    git clone git@github.com:Arvoya/basic-express-server.git
     cd PROJECT
     npm install
 
@@ -26,9 +26,33 @@ Any environment configuration steps.
     npm run dev
     npm start
 
+### Test
+
+    npm test
+    npm test:watch
+
 ## Architecture
 
-Describe how the project is structured.
+```
+├── .github
+│   ├── workflows
+│   │   └── node.yml
+├── __tests__
+│   ├── server.test.js (integration test)
+├── src
+│   ├── error-handlers
+│   │   ├── 404.js
+│   │   ├── 500.js
+│   ├── middleware
+│   │   ├── logger.js
+│   │   ├── validator.js
+│   └── server.js
+├── .eslintrc.json
+├── .gitignore
+├── index.js
+├── package.json
+└── README.md
+```
 
 ### Languages & tools
 
